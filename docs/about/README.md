@@ -1,0 +1,6 @@
+---
+# layout: SpecialLayout
+---
+
+### about
+[Home](/)
