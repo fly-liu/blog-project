@@ -36,7 +36,8 @@ module.exports = {
                 '', /* /home/ */
                 'Vuepress', /* /home/Vuepress.html */
                 'React', /* /home/React.html */
-                'BuildReactFormZero' /* /home/BuildReactFormZero.html */
+                'BuildReactFormZero', /* /home/BuildReactFormZero.html */
+                'AndroidBasics', /* AndroidBasics.html */
             ],
             'tags': [
                 '',
