@@ -9,3 +9,6 @@ npm run docs:dev
 ### 生成静态资源
 ::: tip
 npm run docs:build
+
+### git 路径
+$ git push master https://github.com/fly-liu/blog-project.git
