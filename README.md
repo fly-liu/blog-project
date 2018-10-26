@@ -11,4 +11,4 @@ npm run docs:dev
 npm run docs:build
 
 ### git 路径
-$ git push master https://github.com/fly-liu/blog-project.git
+$ git push https://github.com/fly-liu/blog-project.git master
