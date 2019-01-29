@@ -1,0 +1,36 @@
+.press-list {
+  margin: 40px auto;
+  width: 30%;
+  .item-data {
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 10px 1px #ccc;
+    cursor: pointer;
+  }
+
+  .item-time {
+    color: #999;
+  }
+
+  .item-tag {
+    padding: 0 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #999;
+  }
+}  
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.fl {float: left;}
+.fr {float: right;}
+
+.clearfix {
+    display: block;
+}

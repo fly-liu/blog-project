@@ -23,24 +23,29 @@ module.exports = {
                 text: "Home",
                 link: '/home/',
                 // items: [
-                //     { text: 'vuepress', link: '/home/Vuepress' },
-                //     { text: 'React', link: '/home/React' },
-                //     { text: 'BuildReactFormZero', link: '/home/BuildReactFormZero' },
+                //     { text: 'vuePress', link: '/home/vuePress' },
+                //     { text: 'react', link: '/home/react' },
+                //     { text: 'buildReactFormZero', link: '/home/buildReactFormZero' },
                 // ]
             },
             { text: 'TAGS', link: '/tags/' }, // 指定它为标签目录
             { text: '关于我', link: '/about/' },
         ],
-        sidebar: {
+        sidebar: { //侧边栏菜单
             '/home/': [
                 '', /* /home/ */
-                'Vuepress', /* /home/Vuepress.html */
-                'React', /* /home/React.html */
-                'BuildReactFormZero', /* /home/BuildReactFormZero.html */
-                'AndroidBasics', /* AndroidBasics.html */
+                'vuePress', /* /home/vuePress.html */
+                'react', 
+                'buildReactFormZero', 
+                'androidBasics', 
+				'express应用'
             ],
-            'tags': [
+            '/tags/': [
                 '',
+                'activity的理解',
+				'androidKnowledge',
+				'常用控件',
+				'视图的布局',
             ],
             '/about/': [
                 '',

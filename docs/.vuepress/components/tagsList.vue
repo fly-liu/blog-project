@@ -1,6 +1,6 @@
 <template>
     <div class="press-list">
-      <h3>Blog List:</h3>
+      <h3>Android 相关:</h3>
       <div class="item-data clearfix" v-for="(item,index) in items" :key="index" @click="itemClick(item)">
         <h4 v-text="item.title"></h4>
         <div class="item-time fl">{{item.frontmatter.date ? item.frontmatter.date : '- - -'}}</div>
@@ -21,7 +21,7 @@ export default {
   methods: {
     load_() {
       let that = this;
-      let reg = RegExp("/home/");
+      let reg = RegExp("/tags/");
       that.$site.pages.map(item => {
         if(item.path.match(reg)) {
           let itemArr = item.path.match(reg).input.split('/');
