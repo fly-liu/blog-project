@@ -1,8 +1,17 @@
 ---
+title: Android开发
 sidebar: true
 date: '2018-09-18'
-tag: 'Android'
+tag: # 页面的标签 
+  - Android
+# 一些 meta 标签, 可以用于被搜索引擎爬取
+meta:
+  - name: description
+    content: Android开发
+  - name: keywords # keywords 标签, 在页内搜索时会被查询
+    content: 开发 笔记 Android
 ---
+<!-- more 摘抄 -->
 
 ## Android开发 基础部分
 

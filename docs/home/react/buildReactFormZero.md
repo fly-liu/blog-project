@@ -1,8 +1,17 @@
 ---
-sidebar: false
+title: 搭建React应用
 date: '2018-09-18'
-tag: 'React'
+tag: # 页面的标签 
+  - JS
+  - React
+# 一些 meta 标签, 可以用于被搜索引擎爬取
+meta:
+  - name: description
+    content: 搭建React应用 笔记
+  - name: keywords # keywords 标签, 在页内搜索时会被查询
+    content: 笔记 React
 ---
+<!-- more 摘抄 -->
 
 ## 搭建React应用
 

@@ -1,8 +1,17 @@
 ---
-sidebar: false
+title: 什么是React
 date: '2018-09-18'
-tag: 'React'
+tag: # 页面的标签 
+  - JS
+  - React
+# 一些 meta 标签, 可以用于被搜索引擎爬取
+meta:
+  - name: description
+    content: 什么是React 笔记
+  - name: keywords # keywords 标签, 在页内搜索时会被查询
+    content: 笔记 React
 ---
+<!-- more 摘抄 -->
 
 ## 什么是React
 * A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES

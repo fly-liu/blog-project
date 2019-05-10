@@ -1,8 +1,17 @@
 ---
+title: Activity 理解
 sidebar: true
 date: '2018-11-30'
-tag: 'Android'
+tag: # 页面的标签 
+  - Android
+# 一些 meta 标签, 可以用于被搜索引擎爬取
+meta:
+  - name: description
+    content: Activity 理解
+  - name: keywords # keywords 标签, 在页内搜索时会被查询
+    content: Activity Android 笔记
 ---
+<!-- more 摘抄 -->
 
 # Activity 理解
 ### 组件的特点：

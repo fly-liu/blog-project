@@ -4,7 +4,7 @@ lang: zh_CN
 home: true
 heroImage: /imgs/logo.png
 actionText: 进入 →
-actionLink: /home/
+actionLink: /home/vue/
 features:
 - title: 兴趣
   details: 研究自己不太熟悉的东西让人很兴奋也很苦恼。
@@ -12,4 +12,5 @@ features:
   details: 学习从兴趣开始，兴趣就是对真理的一点点好奇。
 - title: 好奇
   details: 好奇的很。
+layout: fristLayout
 ---

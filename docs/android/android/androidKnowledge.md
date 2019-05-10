@@ -1,8 +1,17 @@
 ---
+title: android 基础知识
 sidebar: false
 date: '2018-11-26'
-tag: 'Android'
+tag: # 页面的标签 
+  - Android
+# 一些 meta 标签, 可以用于被搜索引擎爬取
+meta:
+  - name: description
+    content: android 基础知识
+  - name: keywords # keywords 标签, 在页内搜索时会被查询
+    content: 基础 Android 笔记
 ---
+<!-- more 摘抄 -->
 
 # android 基础知识
 --------------------------------------
