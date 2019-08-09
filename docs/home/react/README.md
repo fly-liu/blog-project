@@ -1,4 +1,3 @@
 ---
-layout: reactList
+layout: ReactList
 ---
-## react

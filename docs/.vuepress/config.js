@@ -1,12 +1,21 @@
 module.exports = {
-    title: '刘哈哈的个人空间',
-    description: '记录 笔记', // 网站描述
+    title: '刘哈哈的个人笔记',
+    description: '记录 笔记 博客 git', // 网站描述
     // 被注入页面 HTML <head> 额外的标签
     head: [
         ['link', { rel: 'manifest', href: '/manifest.json' }],
         ['link', { rel: 'icon', href: `/imgs/logo.png` }]
     ],
-    serviceWorker: true,
+    host: '192.168.5.25',
+    locales: {
+        // 键名是该语言所属的子路径
+        // 作为特例，默认语言可以使用 '/' 作为其路径。
+        '/': {
+          lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
+          title: '刘哈哈的个人笔记',
+          description: 'Vue-Press blog 博客 记录 笔记 git'
+        }
+    },
     themeConfig: {
         repo: "https://github.com/fly-liu/fly-liu.github.io/", // github链接
         logo: '/imgs/logo.png', // 博客的 logo
@@ -25,6 +34,7 @@ module.exports = {
                 ]
             },
             { text: '后端', link: '/serve/' }, // 指定它为标签目录
+            { text: 'Linux', link: '/linux/linux/'},
             { text: 'Android', link: '/android/android/' },
             { text: 'TAGS', link: '/tags/' }, // 指定它为标签目录
             { text: '关于我', link: '/about/' }
@@ -42,7 +52,7 @@ module.exports = {
         },
         search: true, // 是否禁用内置搜索框
         searchMaxSuggestions: 10,
-        lastUpdated: 'Last Updated', // 最后更新时间 string | boolean
+        // lastUpdated: 'Last Updated', // 最后更新时间 string | boolean
         serviceWorker: {
             updatePopup: true
         }
@@ -50,5 +60,11 @@ module.exports = {
     markdown: {
         // 是否在每个代码块的左侧显示行号
         lineNumbers: false,
+    },
+    plugins: {
+        '@vuepress/pwa': {
+            serviceWorker: true,
+            updatePopup: true
+        }
     }
 }

@@ -1,27 +1,43 @@
 <template>
-    <div class="press-list">
-      <h3>{{title}}</h3>
-      <div class="item-data" v-for="(item,index) in items" :key="index" @click="itemClick(item)">
-        <h4 v-text="item.title"></h4>
+    <div class="press-list common-box">
+      <NavbarLayout></NavbarLayout>
+      <div class="item-warrper">
+        <div class="item-data" v-for="(item,index) in items" :key="index">
+          <div class="item-title-warpper">
+            <h2 v-text="item.title" @click="itemClick(item)"></h2>
+            <p @click="itemClick(item)">阅读全文 >></p>
+          </div>
 
-        <div class="more-box" v-if="item.excerpt" v-html="item.excerpt"></div>
+          <div class="more-box" v-if="item.excerpt" v-html="item.excerpt"></div>
 
-        <div class="sign-box" :class="item.excerpt ? 'excerpt' : ''">
-          <div class="item-time">{{item.frontmatter.date ? item.frontmatter.date : '- - -'}}</div>
-          <div class="item-tag-box" v-if="item.frontmatter.tag">
-            <span class="item-tag" v-for="tagString in item.frontmatter.tag" :key="tagString">{{tagString}}</span>
+          <div class="sign-box" :class="item.excerpt ? 'excerpt' : ''">
+            <div class="item-time"><span class="time-icon"></span>{{item.frontmatter.date ? item.frontmatter.date : '- - -'}}</div>
+            <div class="item-tag-box" v-if="item.frontmatter.tag">
+              <div 
+                class="item-tag" 
+                @click="$router.push({ path: '/tags/' })"
+                v-for="tagString in item.frontmatter.tag" 
+                :key="tagString">
+                <span class="tag-icon"></span>
+                <span class="tag-text">{{tagString}}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 </template>
 <script >
+import NavbarLayout from "@theme/layouts/Layout.vue";
 export default {
   props: {
     title: {
       type: String,
       required: true
     }
+  },
+  components: {
+    NavbarLayout
   },
   data() {
     return {
@@ -52,10 +68,59 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/styles/common.scss';
 .press-list {
-  margin: 40px auto;
-  width: 40%;
+  .item-data {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      width: 2%;
+      height: 4px;
+      background: #fff;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      right: 20px;
+      bottom: -2px;
+      width: 2%;
+      height: 4px;
+      background: #fff;
+    }
+  }
+
+  .item-time {
+    .time-icon {
+      background: url(../../assets/imgs/home_icon6.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .item-tag {
+    .tag-icon {
+      background: url(../../assets/imgs/home_icon7.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .press-list {
+    .item-time {
+      .time-icon {
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .item-tag {
+      font-size: 14px;
+      .tag-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 }
 </style>

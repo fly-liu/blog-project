@@ -8,9 +8,11 @@ tag: # 页面的标签
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
   - name: description
-    content: 使用VuePress搭建个人博客
+    content: 刘哈哈 笔记 使用VuePress搭建 个人博客 vue-press
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: vuepress
+prev: ./git提交
+next: false
 ---
 <!-- more 摘抄 -->
 
@@ -103,7 +105,7 @@ npm run docs:build  # 或 yarn docs:build
 ### 网站配置
 ``` js
 module.exports = {
-    title: '刘哈哈的个人空间',
+    title: '刘哈哈的个人博客',
     // 网站描述
     description: '记录 笔记',
     // 被注入页面 HTML <head> 额外的标签
@@ -118,12 +120,12 @@ module.exports = {
 #### manifest.json配置：
 ``` js
 {
-  "name": "刘哈哈的个人空间",
-  "short_name": "刘哈哈的个人空间",
+  "name": "刘哈哈的个人博客",
+  "short_name": "刘哈哈的个人博客",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#2196f3",
-  "description": "刘哈哈的个人空间",
+  "description": "刘哈哈的个人博客",
   "theme_color": "blue",
   "icons": [
     {

@@ -7,9 +7,11 @@ tag: # 页面的标签
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
   - name: description
-    content: 搭建React应用 笔记
+    content: 刘哈哈 个人博客 搭建React应用 笔记
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 笔记 React
+prev: false
+next: ./react
 ---
 <!-- more 摘抄 -->
 

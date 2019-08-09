@@ -1,0 +1,33 @@
+$theme-color: #46bd87;
+$theme-font-color: #2c2c2c;
+$theme-font-size1: .875rem;   // 14px
+$theme-font-size2: 1.125rem;  // 18px
+$theme-font-size3: 2.125rem;  // 34px
+$theme-font-size4: 2.875rem;  // 46px
+
+body, 
+div, 
+dl, 
+dt, 
+dd, 
+ul, 
+ol, 
+li, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+pre, 
+form, 
+fieldset, 
+input, 
+textarea, 
+.header p, 
+blockquote, 
+th, 
+td {
+  // font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+ }

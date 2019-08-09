@@ -7,9 +7,11 @@ tag: # 页面的标签
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
   - name: description
-    content: android 基础知识
+    content: 刘哈哈 个人博客 笔记 android 基础知识
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 基础 Android 笔记
+prev: ./androidBasics
+next: ./常用控件
 ---
 <!-- more 摘抄 -->
 

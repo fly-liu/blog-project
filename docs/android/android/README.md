@@ -1,4 +1,4 @@
 ---
-layout: androidList
+layout: AndroidList
 ---
 

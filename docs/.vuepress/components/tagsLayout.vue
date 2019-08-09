@@ -1,26 +1,31 @@
 <template>
-  <section class="el-box">
-    <h3>Tags:</h3>
-    <div class="tag-box clearfix">
-      <div class="item-tag fl" 
-        v-for="(tagObj,index) in tags" 
-        :key="index" 
-        :style="'background-color:'+tagObj.color" 
-        @click="tagClick(tagObj.el)"
-      >{{`${tagObj.el}&nbsp;&nbsp;(${tagObj.count})`}}</div>
-    </div>
+  <section class="el-box common-box">
+    <NavbarLayout></NavbarLayout>
+    <div class="item-warrper">
+      <div class="tag-box clearfix">
+        <div class="item-tag fl" 
+          v-for="(tagObj,index) in tags" 
+          :key="index" 
+          :style="'background-color:'+tagObj.color" 
+          @click="tagClick(tagObj.el)"
+        >{{`${tagObj.el}&nbsp;&nbsp;(${tagObj.count})`}}</div>
+      </div>
+      <h2></h2>
 
-    <div class="md-list-box" v-show="isDataList">
-      <div class="item-data" v-for="(item,index) in items" :key="index" @click="itemClick(item)">
-        <h4 v-text="item.title"></h4>
+      <div class="md-list-box" v-show="isDataList">
+        <div class="item-data" v-for="(item,index) in items" :key="index" @click="itemClick(item)">
+          <div class="item-left">
+            <div class="item-title-warpper">
+              <h2 v-text="item.title" @click="itemClick(item)"></h2>
+            </div>
 
-        <div class="more-box" v-if="item.excerpt" v-html="item.excerpt"></div>
+            <div class="more-box" v-if="item.excerpt" v-html="item.excerpt"></div>
 
-        <div class="sign-box" :class="item.excerpt ? 'excerpt' : ''">
-          <div class="item-time">{{item.frontmatter.date ? item.frontmatter.date : '- - -'}}</div>
-          <div class="item-tag-box" v-if="item.frontmatter.tag">
-            <span class="item-tag" v-for="tagString in item.frontmatter.tag" :key="tagString">{{tagString}}</span>
+            <div class="sign-box" :class="item.excerpt ? 'excerpt' : ''">
+              <div class="item-time"><span class="time-icon"></span>{{item.frontmatter.date ? item.frontmatter.date : '- - -'}}</div>
+            </div>
           </div>
+          <p @click="itemClick(item)">阅读全文</p>
         </div>
       </div>
     </div>
@@ -28,6 +33,7 @@
 </template>
 <script >
 import {getCount} from './utils/utils'
+import NavbarLayout from "@theme/layouts/Layout.vue"
 export default {
   data() {
     return {
@@ -35,6 +41,9 @@ export default {
       tags: [],
       items: []
     }
+  },
+  components: {
+    NavbarLayout
   },
   methods: {
     load_() {
@@ -73,14 +82,71 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
 .el-box {
-  margin: 40px auto;
-  width: 60%;
+  margin: auto 22%;
   .tag-box {
+    margin-top: 1.875rem;
     .item-tag {
-      margin: 0 10px 10px 0;
-      padding: 6px;
+      margin: 0 1.5rem .625rem 0;
+      padding: .5rem .875rem;
       border: none;
+      color: #f8f8f8;
       cursor: pointer;
+    }
+  }
+  .md-list-box {
+    .item-data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.25rem 0;
+      border: none;
+      border-top: 1px solid #cfcfcf;
+      &:last-child {
+        border-bottom: 1px solid #cfcfcf;
+      }
+      .item-left {
+        width:90%;
+      }
+      p {
+        border: 1px solid;
+        font-size: 0.875rem;
+        color: #46bd87;
+        cursor: pointer;
+        padding: .5rem 1rem;
+      }
+    }
+
+    .item-time {
+      .time-icon {
+        background: url(../assets/imgs/home_icon6.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .el-box {
+    margin: auto 4%;
+    .tag-box {
+      margin: 10px 10px 0;
+      .item-tag {
+        margin: 0 6px 6px 0;
+      }
+    }
+    .md-list-box {
+      .item-data {
+        margin: 0 6%;
+        padding: 0;
+        border: none;
+        .item-left {
+          width:70%;
+        }
+        
+        p {
+          padding: 4px;
+          font-size: 12px;
+        }
+      }
     }
   }
 }

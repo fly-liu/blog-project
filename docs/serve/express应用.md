@@ -7,9 +7,10 @@ tag: # 页面的标签
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
   - name: description
-    content: nodejs express应用
+    content: 刘哈哈 个人博客 nodejs express应用 笔记
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 笔记 基础 node express
+prev: ./nodejs知识点
 ---
 
 # express应用

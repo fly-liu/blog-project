@@ -10,6 +10,8 @@ meta:
     content: nodejs 笔记
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 笔记 node express
+prev: ./nodejs基础
+next: ./express应用
 ---
 
 ## Node JS 知识点笔记
