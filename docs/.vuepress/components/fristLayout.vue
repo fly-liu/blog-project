@@ -124,9 +124,9 @@ export default {
   },
   mounted() {
     this.windowHeight = window.innerHeight;
-    setMainHeight('.home-box');
-
     var mySwiper = new Swiper ('.swiper-container', this.swiperOption);
+
+    setMainHeight('.home-box');
 
     window.onresize = () => { // 绑定到窗口的这个事件中
       let mainHeight = setMainHeight('.home-box');

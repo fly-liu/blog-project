@@ -64,7 +64,11 @@ module.exports = {
     plugins: {
         '@vuepress/pwa': {
             serviceWorker: true,
-            updatePopup: true
+            updatePopup: {
+                message: "New content is available.",
+                buttonText: "Refresh"
+            }
+            // updatePopup: true
         }
     }
 }
