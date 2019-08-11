@@ -11,8 +11,8 @@
               </div>
               <div class="button-list">
                 <img src="../assets/imgs/home_icon1.png" alt="icon1">
-                <button>Docs</button>
-                <button>Tags</button>
+                <button @click="$router.push('/about/')">About</button>
+                <button @click="$router.push('/tags/')">Tags</button>
               </div>
             </div>
             <div class="swiper-slide slide-2">
@@ -229,7 +229,7 @@ export default {
       }
       
       button {
-        border: 4px solid #2c2c2c;
+        border: 4px solid $theme-font-color;
         font-size: .875rem;
         font-weight: 600;
         background: #fff;
@@ -345,13 +345,13 @@ export default {
             padding: .25rem;
             border-radius: 50%;
             background: url(../assets/imgs/home_img8.png) no-repeat center center;
-            background-color: #2c2c2c;
+            background-color: $theme-font-color;
           }
           .item-icon2 {
             padding: .25rem;
             border-radius: 50%;
             background: url(../assets/imgs/home_img9.png) no-repeat center center;
-            background-color: #2c2c2c;
+            background-color: $theme-font-color;
           }
           span {
             width: 2.5rem;
@@ -520,7 +520,7 @@ export default {
       margin-bottom: 0;
     }
     .slide-text {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }

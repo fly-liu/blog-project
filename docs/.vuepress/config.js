@@ -4,16 +4,30 @@ module.exports = {
     // 被注入页面 HTML <head> 额外的标签
     head: [
         ['link', { rel: 'manifest', href: '/manifest.json' }],
-        ['link', { rel: 'icon', href: `/imgs/logo.png` }]
+        ['link', { rel: 'icon', href: `/imgs/logo.png` }],
+        ['meta', { name: 'google', value: 'notranslate' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: `/imgs/logo.png` }],
+        ['link', { rel: 'mask-icon', href: '/imgs/logo.png', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/imgs/logo.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ],
-    host: '192.168.5.25',
+    host: '192.168.3.32',
     locales: {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
         '/': {
           lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
           title: '刘哈哈的个人笔记',
-          description: 'Vue-Press blog 博客 记录 笔记 git'
+          description: 'Vue-Press blog 博客 记录 笔记 git',
+          serviceWorker: {
+            updatePopup: {
+                message: "发现新内容可用.",
+                buttonText: "刷新"
+            }
+          },
         }
     },
     themeConfig: {
@@ -61,14 +75,11 @@ module.exports = {
         // 是否在每个代码块的左侧显示行号
         lineNumbers: false,
     },
+    serviceWorker: true,
     plugins: {
         '@vuepress/pwa': {
             serviceWorker: true,
-            updatePopup: {
-                message: "New content is available.",
-                buttonText: "Refresh"
-            }
-            // updatePopup: true
+            updatePopup: true
         }
     }
 }
