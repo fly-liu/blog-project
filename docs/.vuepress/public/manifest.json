@@ -1,25 +1,16 @@
 {
   "name": "刘哈哈的个人空间",
-  "short_name": "刘哈哈的个人空间",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#2196f3",
-  "description": "刘哈哈的个人空间",
-  "theme_color": "blue",
+  "short_name": "books Fei",
   "icons": [
     {
       "src": "./imgs/logo.png",
-      "sizes": "144x144",
+      "sizes": "1024x1024",
       "type": "image/png"
     }
   ],
-  "related_applications": [
-    {
-      "platform": "web"
-    },
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
-    }
-  ]
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2196f3",
+  "description": "记录学习中的笔记，主要包括HTML5 CSS3 Javascript Vue React Cesium Ubuntu 等操作笔记或者知识点",
+  "theme_color": "blue"
 }

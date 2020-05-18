@@ -14,7 +14,8 @@ module.exports = {
         ['meta', { name: 'msapplication-TileImage', content: '/imgs/logo.png' }],
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ],
-    host: '192.168.3.32',
+    host: '0.0.0.0',
+    dest: '.vuepress/fly-liu.github.io',
     locales: {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -41,6 +42,7 @@ module.exports = {
             {
                 text: "前端栈",
                 items: [
+                    { text: 'JavaScript', link: '/home/javaScript/' },
                     { text: 'Vue', link: '/home/vue/' },
                     { text: 'React', link: '/home/react/' },
                     { text: 'Cesium', link: '/home/cesium/' },
@@ -67,19 +69,21 @@ module.exports = {
         search: true, // 是否禁用内置搜索框
         searchMaxSuggestions: 10,
         // lastUpdated: 'Last Updated', // 最后更新时间 string | boolean
-        serviceWorker: {
-            updatePopup: true
-        }
+        // serviceWorker: { // 0.x 版本的pwa
+        //     updatePopup: true
+        // }
     },
     markdown: {
         // 是否在每个代码块的左侧显示行号
         lineNumbers: false,
     },
-    serviceWorker: true,
-    plugins: {
-        '@vuepress/pwa': {
+    plugins: [
+        ['@vuepress/pwa', {
             serviceWorker: true,
-            updatePopup: true
-        }
-    }
+            updatePopup: {
+                message: "新的风暴已经出现",
+                buttonText: "盘他"
+            }
+        }]
+    ]
 }

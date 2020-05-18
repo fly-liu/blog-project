@@ -2,7 +2,7 @@
 title: NodeJS基础
 date: '2019-02-19'
 tag: # 页面的标签 
-  - JS
+  - Javascript
   - Node
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
@@ -111,6 +111,26 @@ mysql 新设置用户或更改密码后需用flush privileges刷新MySQL的系�
 
 
 ## 模块
+### CommonJS 规范
+Javascript缺少的功能：
++ Javascript没有模块系统。没有原生的支持密闭作用域或依赖管理。
++ JavaScript 没有标准库。除了一些核心库外，没有文件系统的 API，没有 IO 流 API 等。
++ JavaScript 没有标准接口。没有如 Web Server 或者数据库的统一接口。
++ JavaScript 没有包管理系统。不能自动加载和安装依赖。
+
+有需求就有相应的解决方案，CommonJS规范出现了，其目标是为了构建 JavaScript 在包括 Web 服务器，桌面，命令行工具，及浏览器方面的生态系统。
+
+Node 就是使用的CommonJS规范，Node自身实现了require方法作为引入模块的方法，同时NPM也基于CommonJS规范，实现依赖管理和模块自动安装等功能。
+
+### 模块载入机制
+Node 模块分为两类，一类为原生（核心）模块，一类为文件模块。原生模块在 Node.js 源代码编译的时候编译进了二进制执行文件，加载的速度最快。另一类文件模块是动态加载的，加载速度比原生模块慢。但是 Node.js 对原生模块和文件模块都进行了缓存，于是在第二次 require 时，是不会有重复开销的。其中原生模块都被定义在 lib 这个目录下面，文件模块则不定性。
+
+文件模块又分为3种：
++ .js 通过 fs 模块同步读取 js 文件并编译执行。
++ .node 通过 C/C++ 进行编写的 Addon。通过 dlopen 方法进行加载。
++ .json 读取文件，调用 JSON.parse 解析加载。
+
+
 ### fs模块
 fs模块是唯一一个同时提供同步和异步API的模块。
 ``` js

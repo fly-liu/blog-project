@@ -9,15 +9,17 @@
   margin: 1.25rem 25%;
   padding: .625rem 1.25rem;
   border: 1px solid $theme-font-color;
-  
+
   .item-title-warpper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     h2 {
       border-bottom: none;
       cursor: pointer;
     }
+
     p {
       font-size: $theme-font-size1;
       color: $theme-color;
@@ -32,7 +34,7 @@
     border: 1px solid #eee;
     max-height: 340px;
     -webkit-transform: scale(.6);
-    -moz-transform:scale(.6);
+    -moz-transform: scale(.6);
     transform: scale(.6);
     overflow: hidden;
   }
@@ -42,7 +44,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 1rem;
-    
+
     .item-time,
     .item-tag-box {
       display: flex;
@@ -50,7 +52,9 @@
     }
   }
 
-  .excerpt {margin-top: -60px;}
+  .excerpt {
+    margin-top: -60px;
+  }
 }
 
 .item-time,
@@ -62,6 +66,7 @@
 
 .item-time {
   font-size: $theme-font-size1;
+
   .time-icon {
     margin-right: .75rem;
     width: 1.25rem;
@@ -73,45 +78,56 @@
   margin-left: .75rem;
   font-size: 1rem;
   cursor: pointer;
+
   .tag-icon {
     width: 1.375rem;
     height: 1.375rem;
   }
+
   .tag-text {
     padding: 0 4px;
   }
 }
 
 .clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
 }
 
-.fl {float: left;}
-.fr {float: right;}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
 
 .clearfix {
-    display: block;
+  display: block;
 }
 
 /**
  * 屏幕适配
  */
- @media screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
+
   /*1366*/
   .custom-layout {
+
     .press-list,
     .el-box {
       width: 90%;
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   .common-box {
     margin: auto 0;
+
     .item-warrper {
       position: absolute;
       top: 3.5625rem;
@@ -119,20 +135,27 @@
       width: 100%;
     }
   }
+
   .item-data {
     margin: 1.25rem 6%;
+
     .item-title-warpper {
       h2 {
         font-size: 18px;
       }
+
       p {
         display: none;
       }
     }
-    .more-box {display: none;}
+
+    .more-box {
+      display: none;
+    }
+
     .excerpt {
       margin-top: 0;
     }
-    
+
   }
 }

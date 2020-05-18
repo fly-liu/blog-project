@@ -10,7 +10,8 @@ meta:
     content: 刘哈哈 个人博客 笔记 基础 Linux 配置 wordpress
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 笔记 基础 Linux 配置 wordpress
-next: ./VIM编辑器配置(四)
+prev: ./VIM编辑器配置(四)
+next: ./文件操作
 ---
 
 # 搭建Web服务器环境

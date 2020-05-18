@@ -10,7 +10,7 @@ meta:
     content: 刘哈哈 个人博客 笔记 基础 Linux 配置 VIM编辑器
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 笔记 基础 Linux 配置 VIM编辑器
-prex: ./wordpress环境配置
+prex: ./wordpress环境配置(五)
 next: ./VIM编辑器大全(三)
 ---
 

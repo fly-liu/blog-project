@@ -1,6 +1,11 @@
 # Blog Project
 静态博客网站，使用Vuepress构建工具生成，主要内容为学习笔记，在使用一些工具、框架或者感兴趣的东西都会记录下来。
 
+## 安装依赖
+::: tip
+cnpm install
+:::
+
 ## 启动
 ::: tip
 npm run docs:dev
@@ -9,6 +14,7 @@ npm run docs:dev
 ## 生成静态资源
 ::: tip
 npm run docs:build
+:::
 
 ## git 路径
 $ git push https://github.com/fly-liu/blog-project.git master
@@ -18,6 +24,7 @@ $ git push https://github.com/fly-liu/blog-project.git master
 # 版本更新
 
 ## 2.1.0 20190803
+* 更新vuepress到 1.x 版本
 * 更新UI 主页、列表页、Tag页、关于我
 * 更新 Node Js 笔记
 * 增加 Linux 模块笔记

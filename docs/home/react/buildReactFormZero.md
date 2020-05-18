@@ -2,7 +2,7 @@
 title: 搭建React应用
 date: '2018-09-18'
 tag: # 页面的标签 
-  - JS
+  - Javascript
   - React
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:

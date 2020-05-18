@@ -2,7 +2,7 @@
 title: Node JS 知识点笔记
 date: '2019-05-08'
 tag: # 页面的标签 
-  - JS
+  - Javascript
   - Node
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:

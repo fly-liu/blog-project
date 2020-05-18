@@ -53,7 +53,7 @@ export default {
     right: 6%;
     width: 25%;
     height: 50%;
-    background: url(../assets/imgs/about_bg.png) no-repeat center;
+    background: url(https://ae01.alicdn.com/kf/He68f3d200579413fa5dbe13dd70ef92cR.jpg) no-repeat center;
     background-size: contain;
     
     .item-animation {

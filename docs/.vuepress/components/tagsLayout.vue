@@ -118,7 +118,7 @@ export default {
 
     .item-time {
       .time-icon {
-        background: url(../assets/imgs/home_icon6.png) no-repeat center;
+        background: url(https://ae01.alicdn.com/kf/Hc151c568f616423aa733b740fb8ee94cu.jpg) no-repeat center;
         background-size: contain;
       }
     }
