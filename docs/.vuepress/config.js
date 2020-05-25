@@ -4,18 +4,18 @@ module.exports = {
     // 被注入页面 HTML <head> 额外的标签
     head: [
         ['link', { rel: 'manifest', href: '/manifest.json' }],
-        ['link', { rel: 'icon', href: `/imgs/logo.png` }],
+        ['link', { rel: 'icon', href: `https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg` }],
         ['meta', { name: 'google', value: 'notranslate' }],
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-        ['link', { rel: 'apple-touch-icon', href: `/imgs/logo.png` }],
-        ['link', { rel: 'mask-icon', href: '/imgs/logo.png', color: '#3eaf7c' }],
-        ['meta', { name: 'msapplication-TileImage', content: '/imgs/logo.png' }],
+        ['link', { rel: 'apple-touch-icon', href: `https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg` }],
+        ['link', { rel: 'mask-icon', href: 'https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: 'https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg' }],
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ],
     host: '0.0.0.0',
-    dest: '.vuepress/fly-liu.github.io',
+    dest: '.vuepress/dist',
     locales: {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -33,7 +33,7 @@ module.exports = {
     },
     themeConfig: {
         repo: "https://github.com/fly-liu/fly-liu.github.io/", // github链接
-        logo: '/imgs/logo.png', // 博客的 logo
+        logo: 'https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg', // 博客的 logo
         accentColor: '#ac3e40', // 定制文章标题颜色
         per_page: 5, // 每页显示的文章数量
         tags: true, // 开启标签功能

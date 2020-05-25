@@ -1,0 +1,16 @@
+{
+  "name": "刘哈哈的个人空间",
+  "short_name": "books Fei",
+  "icons": [
+    {
+      "src": "./imgs/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2196f3",
+  "description": "记录学习中的笔记，主要包括HTML5 CSS3 Javascript Vue React Cesium Ubuntu 等操作笔记或者知识点",
+  "theme_color": "blue"
+}

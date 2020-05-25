@@ -331,6 +331,7 @@ export default {
 
   .slide-1 {
     position: relative;
+    height: 94vh;
     .bg {
       position: absolute;
       left: 0;

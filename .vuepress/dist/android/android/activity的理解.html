@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Activity 理解 | 刘哈哈的个人笔记</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <link rel="apple-touch-icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <link rel="mask-icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg" color="#3eaf7c">
+    <meta name="description" content="刘哈哈 个人博客 笔记 Activity 理解">
+    <meta name="keywords" content="Activity Android 笔记">
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.7a4a9328.css" as="style"><link rel="preload" href="/assets/js/app.df20760c.js" as="script"><link rel="preload" href="/assets/js/1.54796307.js" as="script"><link rel="preload" href="/assets/js/21.6484ecd7.js" as="script"><link rel="preload" href="/assets/js/14.27e08f0a.js" as="script"><link rel="prefetch" href="/assets/js/10.9e0b0d87.js"><link rel="prefetch" href="/assets/js/11.66db152c.js"><link rel="prefetch" href="/assets/js/12.8eff5435.js"><link rel="prefetch" href="/assets/js/13.de6eabb4.js"><link rel="prefetch" href="/assets/js/15.1d0a3e8f.js"><link rel="prefetch" href="/assets/js/16.32375800.js"><link rel="prefetch" href="/assets/js/17.3c7685ff.js"><link rel="prefetch" href="/assets/js/18.1a012608.js"><link rel="prefetch" href="/assets/js/19.5bf40a9c.js"><link rel="prefetch" href="/assets/js/20.5c85a8bf.js"><link rel="prefetch" href="/assets/js/22.d9d383b2.js"><link rel="prefetch" href="/assets/js/23.0a4456ce.js"><link rel="prefetch" href="/assets/js/24.c811af30.js"><link rel="prefetch" href="/assets/js/25.f491616e.js"><link rel="prefetch" href="/assets/js/26.b6e53053.js"><link rel="prefetch" href="/assets/js/27.fdca15bb.js"><link rel="prefetch" href="/assets/js/28.883b50f6.js"><link rel="prefetch" href="/assets/js/29.4117af63.js"><link rel="prefetch" href="/assets/js/3.c1569343.js"><link rel="prefetch" href="/assets/js/30.99165a14.js"><link rel="prefetch" href="/assets/js/31.682682c1.js"><link rel="prefetch" href="/assets/js/32.9af1c170.js"><link rel="prefetch" href="/assets/js/33.3fc0aa49.js"><link rel="prefetch" href="/assets/js/34.571472ef.js"><link rel="prefetch" href="/assets/js/35.fc681ec2.js"><link rel="prefetch" href="/assets/js/36.94b412fa.js"><link rel="prefetch" href="/assets/js/37.a0354b16.js"><link rel="prefetch" href="/assets/js/38.32824c0b.js"><link rel="prefetch" href="/assets/js/39.75c34c54.js"><link rel="prefetch" href="/assets/js/4.877e64cf.js"><link rel="prefetch" href="/assets/js/40.e2d272ae.js"><link rel="prefetch" href="/assets/js/41.afd0f196.js"><link rel="prefetch" href="/assets/js/42.1b2b2481.js"><link rel="prefetch" href="/assets/js/43.0aebc648.js"><link rel="prefetch" href="/assets/js/44.14dfec88.js"><link rel="prefetch" href="/assets/js/45.c5951582.js"><link rel="prefetch" href="/assets/js/46.c11de141.js"><link rel="prefetch" href="/assets/js/47.72593fb5.js"><link rel="prefetch" href="/assets/js/48.bc774c0e.js"><link rel="prefetch" href="/assets/js/49.33d551f0.js"><link rel="prefetch" href="/assets/js/5.4d0864da.js"><link rel="prefetch" href="/assets/js/6.df095d9e.js"><link rel="prefetch" href="/assets/js/7.8a652065.js"><link rel="prefetch" href="/assets/js/8.92e5c5df.js"><link rel="prefetch" href="/assets/js/9.12cfba67.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7a4a9328.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg" alt="刘哈哈的个人笔记" class="logo"> <span class="site-name can-hide">刘哈哈的个人笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端栈" class="dropdown-title"><span class="title">前端栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/home/javaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/home/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/home/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/home/cesium/" class="nav-link">
+  Cesium
+</a></li><li class="dropdown-item"><!----> <a href="/home/electron/" class="nav-link">
+  Electron
+</a></li></ul></div></div><div class="nav-item"><a href="/serve/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/linux/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/android/android/" class="nav-link router-link-active">
+  Android
+</a></div><div class="nav-item"><a href="/tags/" class="nav-link">
+  TAGS
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/fly-liu/fly-liu.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端栈" class="dropdown-title"><span class="title">前端栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/home/javaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/home/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/home/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/home/cesium/" class="nav-link">
+  Cesium
+</a></li><li class="dropdown-item"><!----> <a href="/home/electron/" class="nav-link">
+  Electron
+</a></li></ul></div></div><div class="nav-item"><a href="/serve/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/linux/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/android/android/" class="nav-link router-link-active">
+  Android
+</a></div><div class="nav-item"><a href="/tags/" class="nav-link">
+  TAGS
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/fly-liu/fly-liu.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="activity-理解"><a href="#activity-理解" class="header-anchor">#</a> Activity 理解</h1> <h3 id="组件的特点："><a href="#组件的特点：" class="header-anchor">#</a> 组件的特点：</h3> <ul><li>它的类必须实现特定接口或基础特定类</li> <li>需要在配置文件中配置其全类名</li> <li>它的对象不是通过new来创建的，而是系统自动创建的</li> <li>它的对象具有一定的生命周期，它的类中有对应的生命周期回调方法</li></ul> <h3 id="哪些地方用到反射（andriod）："><a href="#哪些地方用到反射（andriod）：" class="header-anchor">#</a> 哪些地方用到反射（Andriod）：</h3> <p>a. 配置文本中配置全类名
+b. 布局文件定义标签
+c. 显示意图，Intent(Context context,Class cls);</p> <h2 id="activity的定义："><a href="#activity的定义：" class="header-anchor">#</a> Activity的定义：</h2> <ul><li>Activity，直译为活动，它是Android定义的四大应用组件之一，也是最重要用的最多的</li> <li>Activity用来提供一个能让用户操作并与之交互的界面</li> <li>一个应用有多个界面，也就是包含多个Activity</li></ul> <h2 id="servlet的理解"><a href="#servlet的理解" class="header-anchor">#</a> Servlet的理解</h2> <ul><li>狭义：
+<ul><li>Servlet是一个interface，我们的Servlet类都必须是此接口的实现类</li></ul></li> <li>广义：
+<ul><li>Servlet是一种服务器端的组件，用来处理客户端（浏览器）提交的请求，并返回一个响应界面</li></ul></li></ul> <h2 id="activity和servlet的对比"><a href="#activity和servlet的对比" class="header-anchor">#</a> Activity和Servlet的对比</h2> <table><thead><tr><th></th> <th style="text-align:right;">Servlet</th> <th style="text-align:right;">Activity</th></tr></thead> <tbody><tr><td><strong>组件</strong></td> <td style="text-align:right;">服务器端组件</td> <td style="text-align:right;">Andriod客户端组件</td></tr> <tr><td><strong>规范定义的接口或类</strong></td> <td style="text-align:right;">Servlet接口</td> <td style="text-align:right;">Activity类</td></tr> <tr><td><strong>注册</strong></td> <td style="text-align:right;">web.xml</td> <td style="text-align:right;">AndroidManifest.xml</td></tr> <tr><td><strong>声明周期方法</strong></td> <td style="text-align:right;">init()<br> service()<br> doGet()<br> doPost()<br> destory()</td> <td style="text-align:right;">onCreate()<br> onStart()<br> onResume()<br> ......<br> onDestroy()</td></tr> <tr><td><strong>请求的发出源</strong></td> <td style="text-align:right;">浏览器/移动设备</td> <td style="text-align:right;">手机屏幕</td></tr></tbody></table> <h2 id="activity状态"><a href="#activity状态" class="header-anchor">#</a> Activity状态</h2> <ul><li>运行状态：可见也可操作</li> <li>暂停状态：可见但不可操作</li> <li>停止状态：不可见但对象存在</li> <li>死亡状态：对象不存在</li></ul> <hr> <h2 id="intent的理解"><a href="#intent的理解" class="header-anchor">#</a> Intent的理解</h2> <ul><li>Intent,直译为意图，也就是你想做什么或者去哪</li> <li>Intent是Activity,Service和BroadcastReceiver这三个应用组件之间进行通信的信使
+<ul><li>例如：在Activity中启动另一个Activity</li></ul></li> <li>意图对象可以携带对象</li></ul> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>Intent不是Andriod中的四大应用组件之一</p></div> <h2 id="intent的分类"><a href="#intent的分类" class="header-anchor">#</a> Intent的分类</h2> <ul><li>显式意图：明确指定的目标组件的意图
+<ul><li>创建对象：Intent(Context context,Class clazz)</li> <li>何时使用：当操作当前自己应用的组件时使用</li></ul></li> <li>隐式意图：没有明确指定目标组件的意图
+<ul><li>创建对象：Intent(String action)</li> <li>何时使用：当操作其他应用的组件时使用</li></ul></li></ul> <h2 id="intentfilter的理解"><a href="#intentfilter的理解" class="header-anchor">#</a> IntentFilter的理解</h2> <ul><li>意图过滤器</li> <li>在配置Activity时，可以为Activity指定一个IntentFilter的配置</li> <li>如果你的Activity希望其他应用能访问到，需要配置<code>&lt;intent-filter&gt;</code></li> <li>如果你想启动其他应用的界面你必须用隐式Intent，且目标界面Activity配置了<code>&lt;intent-filter&gt;</code></li> <li>它的作用类似于web中的为Servlet配置了<code>&lt;url-pattern&gt;</code></li></ul> <h2 id="相关api"><a href="#相关api" class="header-anchor">#</a> 相关API</h2> <h3 id="activity的使用（活动）"><a href="#activity的使用（活动）" class="header-anchor">#</a> Activity的使用（活动）:</h3> <ul><li>定义：
+<ul><li>定义一个类 extends Activity，并重写生命周期方法</li> <li>在功能清单文件中使用&gt;<code>&lt;activity&gt;</code>注册</li></ul></li> <li>启动：
+<ul><li>一般启动Activity：startActivity(Intent intent)</li> <li>带回调启动Activity：startActivityForResult(int reqCode,Intent intent)</li></ul></li> <li>结束：
+<ul><li>设置要返回的结果：setResult(int resultCode,Intent data)</li> <li>结束当前Activity：finish()</li></ul></li> <li>回调方法：onActivityResult(int reqCode,int resultCode,Intent data)</li> <li>得到启动Activity的意图：getIntent()</li></ul> <h3 id="intent的使用（意图）"><a href="#intent的使用（意图）" class="header-anchor">#</a> Intent的使用（意图）:</h3> <ul><li>创建：
+<ul><li>创建显式意图对象：Intent(Context packageContext,Class&lt;?&gt; cls)</li> <li>创建隐式意图对象：Intent(String action)，与Activity与<code>&lt;intent-filter&gt;</code>的action对应</li></ul></li> <li>携带数据：
+<ul><li>保存额外数据：putExtra(String name,Xxx value),内部用map容器保存</li> <li>设置有特定前缀的uri数据：setData(Uri data)</li></ul></li> <li>读取数据：
+<ul><li>获取额外数据：Xxx getXxxExtra(String name)</li> <li>获取特定前缀的数据：Uri getData()</li></ul></li></ul> <h2 id="task-stack（back-stack）结构来存储管理启动的activity"><a href="#task-stack（back-stack）结构来存储管理启动的activity" class="header-anchor">#</a> Task Stack（Back Stack）结构来存储管理启动的Activity</h2> <p>一个应用启动，系统就会为其创建一个对应的Task Stack来存储并管理该应用的Activity对象</p> <h3 id="activity的launchmode"><a href="#activity的launchmode" class="header-anchor">#</a> Activity的launchMode</h3> <p>启动一个Activity有时需要总是创建一个新对象，有时需要复用已有的对象，可以在配置Activity时通过launchMode属性指定</p> <ul><li>standard: 标准模式，每次调用startActivity()方法就会产生一个新的实例</li> <li>singleTop: 如果已有一个实例位于Activity栈顶部时，就不产生新的实例；如果不位于栈顶，会产生一个新的实例</li> <li>singleTask: 只有一个实例，默认在当前Task中</li> <li>singleInstance: 只有一个实例，创建时会新建一个栈，且此栈中不能有其他对象</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/android/android/androidBasics.html">
+        Android开发
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.df20760c.js" defer></script><script src="/assets/js/1.54796307.js" defer></script><script src="/assets/js/21.6484ecd7.js" defer></script><script src="/assets/js/14.27e08f0a.js" defer></script>
+  </body>
+</html>

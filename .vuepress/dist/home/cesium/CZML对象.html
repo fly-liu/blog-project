@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CZML对象 | 刘哈哈的个人笔记</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <link rel="apple-touch-icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <link rel="mask-icon" href="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg" color="#3eaf7c">
+    <meta name="description" content="刘哈哈 笔记 cesium 个人博客 vue-press">
+    <meta name="keywords" content="cesium知识点问题笔记">
+    <meta name="google" value="notranslate">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.7a4a9328.css" as="style"><link rel="preload" href="/assets/js/app.df20760c.js" as="script"><link rel="preload" href="/assets/js/1.54796307.js" as="script"><link rel="preload" href="/assets/js/26.b6e53053.js" as="script"><link rel="preload" href="/assets/js/14.27e08f0a.js" as="script"><link rel="prefetch" href="/assets/js/10.9e0b0d87.js"><link rel="prefetch" href="/assets/js/11.66db152c.js"><link rel="prefetch" href="/assets/js/12.8eff5435.js"><link rel="prefetch" href="/assets/js/13.de6eabb4.js"><link rel="prefetch" href="/assets/js/15.1d0a3e8f.js"><link rel="prefetch" href="/assets/js/16.32375800.js"><link rel="prefetch" href="/assets/js/17.3c7685ff.js"><link rel="prefetch" href="/assets/js/18.1a012608.js"><link rel="prefetch" href="/assets/js/19.5bf40a9c.js"><link rel="prefetch" href="/assets/js/20.5c85a8bf.js"><link rel="prefetch" href="/assets/js/21.6484ecd7.js"><link rel="prefetch" href="/assets/js/22.d9d383b2.js"><link rel="prefetch" href="/assets/js/23.0a4456ce.js"><link rel="prefetch" href="/assets/js/24.c811af30.js"><link rel="prefetch" href="/assets/js/25.f491616e.js"><link rel="prefetch" href="/assets/js/27.fdca15bb.js"><link rel="prefetch" href="/assets/js/28.883b50f6.js"><link rel="prefetch" href="/assets/js/29.4117af63.js"><link rel="prefetch" href="/assets/js/3.c1569343.js"><link rel="prefetch" href="/assets/js/30.99165a14.js"><link rel="prefetch" href="/assets/js/31.682682c1.js"><link rel="prefetch" href="/assets/js/32.9af1c170.js"><link rel="prefetch" href="/assets/js/33.3fc0aa49.js"><link rel="prefetch" href="/assets/js/34.571472ef.js"><link rel="prefetch" href="/assets/js/35.fc681ec2.js"><link rel="prefetch" href="/assets/js/36.94b412fa.js"><link rel="prefetch" href="/assets/js/37.a0354b16.js"><link rel="prefetch" href="/assets/js/38.32824c0b.js"><link rel="prefetch" href="/assets/js/39.75c34c54.js"><link rel="prefetch" href="/assets/js/4.877e64cf.js"><link rel="prefetch" href="/assets/js/40.e2d272ae.js"><link rel="prefetch" href="/assets/js/41.afd0f196.js"><link rel="prefetch" href="/assets/js/42.1b2b2481.js"><link rel="prefetch" href="/assets/js/43.0aebc648.js"><link rel="prefetch" href="/assets/js/44.14dfec88.js"><link rel="prefetch" href="/assets/js/45.c5951582.js"><link rel="prefetch" href="/assets/js/46.c11de141.js"><link rel="prefetch" href="/assets/js/47.72593fb5.js"><link rel="prefetch" href="/assets/js/48.bc774c0e.js"><link rel="prefetch" href="/assets/js/49.33d551f0.js"><link rel="prefetch" href="/assets/js/5.4d0864da.js"><link rel="prefetch" href="/assets/js/6.df095d9e.js"><link rel="prefetch" href="/assets/js/7.8a652065.js"><link rel="prefetch" href="/assets/js/8.92e5c5df.js"><link rel="prefetch" href="/assets/js/9.12cfba67.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7a4a9328.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg" alt="刘哈哈的个人笔记" class="logo"> <span class="site-name can-hide">刘哈哈的个人笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端栈" class="dropdown-title"><span class="title">前端栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/home/javaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/home/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/home/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/home/cesium/" class="nav-link router-link-active">
+  Cesium
+</a></li><li class="dropdown-item"><!----> <a href="/home/electron/" class="nav-link">
+  Electron
+</a></li></ul></div></div><div class="nav-item"><a href="/serve/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/linux/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/android/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/tags/" class="nav-link">
+  TAGS
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/fly-liu/fly-liu.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端栈" class="dropdown-title"><span class="title">前端栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/home/javaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/home/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/home/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/home/cesium/" class="nav-link router-link-active">
+  Cesium
+</a></li><li class="dropdown-item"><!----> <a href="/home/electron/" class="nav-link">
+  Electron
+</a></li></ul></div></div><div class="nav-item"><a href="/serve/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/linux/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/android/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/tags/" class="nav-link">
+  TAGS
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/fly-liu/fly-liu.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="czml对象"><a href="#czml对象" class="header-anchor">#</a> CZML对象</h2> <p>CZML是JSON的一个子集，意味着一个有效的CZML文档便也是一个JSON文档，那么CZML与Cesium是什么关系呢，可以这样理解，Cesium是载体，CZML是一种数据结构，通过CZML可以在cesium球体中展现可视化的动态效果。<br>
+一个CZML文档包含一个JSON数组，数组中每一个对象都是一个CZML数据包（packet），一个packet对应一个场景中的对象。<a href="http://www.xiaobaigis.com/Articles/cesium/czmlStructure_cesium.html" target="_blank" rel="noopener noreferrer">参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="文档结构"><a href="#文档结构" class="header-anchor">#</a> 文档结构</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// 版本声明的一些信息</span>
+    <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;document&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;polygon&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;clock&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z/2012-08-04T16:02:00Z&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;currentTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;multiplier&quot;</span><span class="token operator">:</span> <span class="token number">10</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+  <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Vehicle&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;绿色轨迹线&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;availability&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z/2012-08-04T16:02:00Z&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 模型运动的时间</span>
+    <span class="token string">&quot;path&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;material&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;solidColor&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token string">&quot;color&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z/2012-08-04T18:00:00Z&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;rgba&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;width&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z/2012-08-04T18:00:00Z&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">3.0</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;show&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z/2012-08-04T18:00:00Z&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;boolean&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 模型</span>
+    <span class="token string">&quot;model&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;gltf&quot;</span><span class="token operator">:</span> <span class="token string">&quot;../Cesium/models/GroundVehicle/GroundVehicle.glb&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;minimumPixelSize&quot;</span><span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;maximumScale&quot;</span><span class="token operator">:</span> <span class="token number">50</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 坐标</span>
+    <span class="token string">&quot;position&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;interpolationAlgorithm&quot;</span><span class="token operator">:</span> <span class="token string">&quot;LAGRANGE&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;interpolationDegree&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;epoch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2012-08-04T16:00:00Z&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 坐标的起始时间</span>
+      <span class="token comment">// 实际坐标值</span>
+      <span class="token string">&quot;cartographicDegrees&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">116.3932817290777</span><span class="token punctuation">,</span> <span class="token number">39.90675008687875000</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">10.0</span><span class="token punctuation">,</span> <span class="token number">116.39103157846526</span><span class="token punctuation">,</span> <span class="token number">39.90675133942299600</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">20.0</span><span class="token punctuation">,</span> <span class="token number">116.390694583894</span><span class="token punctuation">,</span> <span class="token number">39.90689680346637400</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">30.0</span><span class="token punctuation">,</span> <span class="token number">116.39066058875329</span><span class="token punctuation">,</span> <span class="token number">39.90899854654115100</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">40.0</span><span class="token punctuation">,</span> <span class="token number">116.39085332141151</span><span class="token punctuation">,</span> <span class="token number">39.90939830931298408</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">50.0</span><span class="token punctuation">,</span> <span class="token number">116.39124255584764</span><span class="token punctuation">,</span> <span class="token number">39.90949714214868500</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">60.0</span><span class="token punctuation">,</span> <span class="token number">116.39474370828448</span><span class="token punctuation">,</span> <span class="token number">39.90947572166330602</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">70.0</span><span class="token punctuation">,</span> <span class="token number">116.39521614417647</span><span class="token punctuation">,</span> <span class="token number">39.90929292541459900</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">80.0</span><span class="token punctuation">,</span> <span class="token number">116.39529781228491</span><span class="token punctuation">,</span> <span class="token number">39.90895880495633600</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">116.39527433427607</span><span class="token punctuation">,</span> <span class="token number">39.90729562976118300</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">100.0</span><span class="token punctuation">,</span> <span class="token number">116.39512780580918</span><span class="token punctuation">,</span> <span class="token number">39.90693036348709000</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">110.0</span><span class="token punctuation">,</span> <span class="token number">116.39475847109615</span><span class="token punctuation">,</span> <span class="token number">39.90672626559058570</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
+        <span class="token number">120.0</span><span class="token punctuation">,</span> <span class="token number">116.3932817290777</span><span class="token punctuation">,</span> <span class="token number">39.90675008687875000</span><span class="token punctuation">,</span> <span class="token number">0.0</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;orientation&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;velocityReference&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#position&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h3 id="下面是一个包的详细属性，在使用过程中可以包含0个或一个属性"><a href="#下面是一个包的详细属性，在使用过程中可以包含0个或一个属性" class="header-anchor">#</a> 下面是一个包的详细属性，在使用过程中可以包含0个或一个属性</h3> <ul><li><p>id - 字符串:
+此数据包描述的对象的ID。ID不需要是GUID，但它们确实需要唯一地标识CZML源中的单个对象以及加载到同一范围内的任何其他CZML源。如果未指定此属性，客户端将自动生成唯一的属性。但是，这会阻止以后的数据包引用此对象以向其添加更多数据</p></li> <li><p>delete - 布尔值:
+客户端是否应删除由ID标识的此对象的所有现有数据。如果为true，则将忽略此数据包中的所有其他属性</p></li> <li><p>name - 字符串:
+对象的名称。它不必是唯一的，旨在供用户使用</p></li> <li><p>parent - 字符串:
+父对象的ID（如果有）</p></li> <li><p>description - 字符串:
+对象的HTML描述</p></li> <li><p>clock-Clock:
+整个数据集的时钟设置。仅对文档对象有效</p></li> <li><p>version-字符串:
+CZML 版本</p></li> <li><p>availability-TimeIntervalCollection:
+对象数据可用的时间间隔集。该属性可以是指定单个间隔的单个字符串，也可以是表示间隔的字符串数组。如果更改或发现不正确，以后的Cesium数据包可以更新此可用性</p></li> <li><p>properties - CustomProperties:
+此对象的一组自定义属性</p></li> <li><p>position-Position:
+物体在世界上的位置。该位置没有直接的可视化表示，但它用于定位附加到对象的广告牌，标签和其他图形项。</p></li> <li><p>orientation-Orientation :
+世界上物体的方向。方向没有直接的可视化表示，但它用于定向模型，圆锥，金字塔和附加到对象的其他图形项</p></li> <li><p>viewFrom - ViewFrom:
+查看此对象时建议的相机位置。该属性被指定为相对于对象位置的East（x），North（y），Up（z）参考系中的笛卡尔位置</p></li> <li><p>billboard - Billboard:
+广告牌或视口对齐的图像，有时称为标记。广告牌由position属性定位在场景中</p></li> <li><p>box - Box:
+一个盒子，是一个封闭的长方体。使用position和orientation属性定位和定向框。</p></li> <li><p>corridor - Corridor:
+是由中心线和宽度定义的形状</p></li> <li><p>cylinder - Cylinder:
+由长度，顶部半径和底部半径定义的圆柱体，截锥体或圆锥体。使用position和orientation属性定位和定向圆柱体。</p></li> <li><p>ellipse - Ellipse:
+是地球表面上的闭合曲线。使用position属性定位椭圆。</p></li> <li><p>ellipsoid - Ellipsoid:
+是一个闭合的二次曲面，是椭圆的三维模拟。使用position和orientation属性定位和定向椭圆体。</p></li> <li><p>label - Label:
+一串文字。标签由position物业定位在场景中</p></li> <li><p>model - Model:
+3D模型。使用position和orientation属性定位和定向模型。</p></li> <li><p>path - Path:
+是由对象随时间的运动定义的折线。路径的可能顶点由position属性指定</p></li> <li><p>point - Point:
+点或视口对齐的圆。该点由position物业定位在场景中</p></li> <li><p>polygon - Polygon:
+是地球表面上的封闭图形</p></li> <li><p>polyline - Polyline:
+是由多个线段组成的场景中的线。</p></li> <li><p>rectangle - Rectangle:
+一个制图矩形,符合地球的曲率，可以沿表面或海拔高度放置</p></li> <li><p>wall - Wall:
+二维墙，符合地球的曲率，可以沿表面或高度放置</p></li> <li><p>agi_conicSensor - ConicSensor:
+考虑到椭圆体（即球体）的遮挡的锥形传感器体积。使用position和orientation属性定位和定向传感器。</p></li> <li><p>agi_customPatternSensor - CustomPatternSensor:
+考虑到椭圆体（即球体）的遮挡的自定义传感器体积。使用position和orientation属性定位和定向传感器</p></li> <li><p>agi_rectangularSensor - RectangularSensor:
+考虑椭圆体（即球体）遮挡的矩形金字塔传感器体积。使用position和orientation属性定位和定向传感器。</p></li> <li><p>agi_fan - Fan:
+它从一个点或顶点开始，并从顶点指定的方向列表中延伸</p></li> <li><p>agi_vector - Vector:<br>
+定义源自position属性的图形矢量，并在提供的方向上延伸所提供的长度。使用position属性定位矢量。</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/home/cesium/cesium基础.html" class="prev">
+        cesium基础
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.df20760c.js" defer></script><script src="/assets/js/1.54796307.js" defer></script><script src="/assets/js/26.b6e53053.js" defer></script><script src="/assets/js/14.27e08f0a.js" defer></script>
+  </body>
+</html>

@@ -288,3 +288,17 @@ meta:
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: theme vuepress
 ```
+
+## 部署
+```
+### 生成静态文件
+
+### 进入生成的文件夹
+cd .vuepress/dist
+
+### 提交git
+git init
+git add -A
+git commit -m 'deploy'
+git push -f git@github.com:fly-liu/fly-liu.github.io.git master
+```
