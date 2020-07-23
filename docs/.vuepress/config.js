@@ -25,8 +25,8 @@ module.exports = {
           description: 'Vue-Press blog 博客 记录 笔记 git',
           serviceWorker: {
             updatePopup: {
-                message: "发现新内容可用.",
-                buttonText: "刷新"
+                message: "新的风暴已经出现.",
+                buttonText: "盘他"
             }
           },
         }
@@ -40,13 +40,13 @@ module.exports = {
         // 导航菜单
         nav: [
             {
-                text: "前端栈",
+                text: "前端",
                 items: [
-                    { text: 'JavaScript', link: '/home/javaScript/' },
+                    { text: 'HTML CSS JS', link: '/home/BasicsList/' },
                     { text: 'Vue', link: '/home/vue/' },
                     { text: 'React', link: '/home/react/' },
                     { text: 'Cesium', link: '/home/cesium/' },
-                    { text: 'Electron', link: '/home/electron/' }
+                    // { text: 'Electron', link: '/home/electron/' }
                 ]
             },
             { text: '后端', link: '/serve/' }, // 指定它为标签目录
@@ -58,15 +58,32 @@ module.exports = {
         sidebar: { //侧边栏菜单
             '/serve/': [{
                 title: '后端技术',
-                collapsable: false, // 设置为永远都是展开状态
+                collapsable: true, // 设置为永远都是展开状态
                 children: [
                     'nodejs基础', 
                     'nodejs知识点',  
                     'express应用',
                 ]
+            }],
+            '/home/BasicsList/': [{
+                title: 'HTML CSS JS',
+                collapsable: true, // 设置为永远都是展开状态
+                sidebarDepth: 2, // 默认显示的侧边栏深度,最大的深度为 2，它将同时提取 h2 和 h3 标题
+                children: [
+                    '知识点笔记', 
+                ]
+            }],
+            '/home/vue/': [{
+                title: 'Vue',
+                collapsable: true, // 设置为永远都是展开状态
+                sidebarDepth: 2, // 默认显示的侧边栏深度,最大的深度为 2，它将同时提取 h2 和 h3 标题
+                children: [
+                    'vueLog', 
+                    'vueLog2', 
+                ]
             }]
         },
-        search: true, // 是否禁用内置搜索框
+        search: true, // 启用内置搜索框
         searchMaxSuggestions: 10,
         // lastUpdated: 'Last Updated', // 最后更新时间 string | boolean
         // serviceWorker: { // 0.x 版本的pwa

@@ -46,17 +46,28 @@ export default {
   },
   methods: {
     load_() {
-      let that = this;
-      // let reg = RegExp("/home/vue/");
-      let reg = RegExp(that.$page.path);
+      const that = this;
+      // const reg = RegExp("/home/vue/");
+      const reg = RegExp(that.$page.path);
+      let newDataList = []
       that.$site.pages.map(item => {
         if(item.path.match(reg)) {
           let itemArr = item.path.match(reg).input.split('/')[3] || "";
           
           if(itemArr[2]) {
-            that.items.push(item);
+            newDataList.push(item);
           }
         }
+      });
+      newDataList = this.sortKey(newDataList, "date")
+      
+      that.items = newDataList
+    },
+    sortKey(array, key) {
+      return array.sort((a, b) => {
+        var x = a.frontmatter[key];
+        var y = b.frontmatter[key];
+        return x > y ? -1 : x < y ? 1 : 0;
       });
     },
     itemClick(e) {
@@ -68,6 +79,13 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .press-list {
+    .sidebar {
+      display: none;
+    }
+  }
+</style>
 <style lang="scss" scoped>
 @import '../../assets/styles/common.scss';
 .press-list {

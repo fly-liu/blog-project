@@ -50,42 +50,45 @@
             />自我介绍
           </p>
           <div class="slide-flex">
-            <div class="img-fixed box-shadow">
+            <div class="blog-flex-centered img-fixed box-shadow border-radius13">
+              <h3 class="blog-item">勤奋</h3>
+              <div class="blog-item-content">
+                <p>勤奋</p>
+              </div>
+            </div>
+            <div class="blog-flex-centered img-fixed box-shadow border-radius13">
               <img
+                class="blog-item"
                 src="https://ae01.alicdn.com/kf/Hc9c359a1b5c64f76ae7725f366f2641cr.jpg"
                 alt="个人照片1"
               />
+              <div class="blog-item-content">
+                <p>喜欢跑步</p>
+              </div>
             </div>
-            <div class="img-fixed box-shadow">
+            <div class="blog-flex-centered img-fixed box-shadow border-radius13">
+              <h3 class="blog-item">有责任感</h3>
+              <div class="blog-item-content">
+                <p>有责任感</p>
+              </div>
+            </div>
+            <div class="blog-flex-centered img-fixed box-shadow border-radius13">
               <img
+                class="blog-item"
                 src="https://ae01.alicdn.com/kf/H2e59b0546c2348ad967947f5be5f3bcex.jpg"
                 alt="个人照片2"
               />
+              <div class="blog-item-content">
+                <p>喜欢旅游</p>
+              </div>
             </div>
-            <div class="img-fixed box-shadow">
-              <img
-                src="https://ae01.alicdn.com/kf/H2e59b0546c2348ad967947f5be5f3bcex.jpg"
-                alt="个人照片2"
-              />
+            <div class="blog-flex-centered img-fixed box-shadow border-radius13">
+              <h3 class="blog-item">认真</h3>
+              <div class="blog-item-content">
+                <p>认真工作</p>
+              </div>
             </div>
-            <div class="img-fixed box-shadow">
-              <img
-                src="https://ae01.alicdn.com/kf/H2e59b0546c2348ad967947f5be5f3bcex.jpg"
-                alt="个人照片2"
-              />
-            </div>
-            <div class="img-fixed box-shadow">
-              <img
-                src="https://ae01.alicdn.com/kf/H2e59b0546c2348ad967947f5be5f3bcex.jpg"
-                alt="个人照片2"
-              />
-            </div>
-            <div class="img-fixed box-shadow">
-              <img
-                src="https://ae01.alicdn.com/kf/H2e59b0546c2348ad967947f5be5f3bcex.jpg"
-                alt="个人照片2"
-              />
-            </div>
+            
             <!-- <div class="slide-icon"></div> -->
           </div>
           <p class="slide-text">非典型程序猿一枚，喜欢跑步，喜欢旅游，喜欢骑行以及各种户外运动</p>
@@ -102,96 +105,25 @@
             <img
               src="https://ae01.alicdn.com/kf/H3b14cccbde8c473ab77d37c0c3b96ecfT.jpg"
               alt="icon2"
-            />我们的项目
+            />参与的项目
           </p>
-          <div class="slide-wrapper">
+          <div class="slide-wrapper" v-for="(works,index) in worksList" :key="index">
             <div class="slide-flex">
               <img
+                v-for="(imageObj,key) in works.images"
                 class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/Hd347065ad4a2401ebab0e14a2962659dE.jpg"
-                alt="消防巡检1"
+                :key="key"
+                :src="imageObj.src"
+                :alt="imageObj.alt"
+                @click="toggleView($event)"
               />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/H2a0345cfa303429fac83eb76cbe403ab8.jpg"
-                alt="消防巡检2"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/Ha406f731286e44cb8e7186d01ce2d6b8w.jpg"
-                alt="消防巡检3"
-              />
-            </div>
-            <h3 class="slide-title">消防巡检平台</h3>
+              </div>
+            <h3 class="slide-title">{{works.header}}</h3>
             <p
               class="slide-text"
-            >项目说明：该平台是集数据可视化大屏、三维地图的消防设施管理平台，数据可视化大屏加载了三维模型，反应真实的应用场景，结合了人脸识别、实时视频流、智慧传感设备，可实时推送信息，做到远程检测和控制；发生严重异常时，比如烟雾、火灾报警会实时发出警报，设备做应急反应。该系统还包括设备管理、维护以及设备管理等功能模块。</p>
-            <p class="slide-text">使用技术：项目使用前后端分离开发，单页面应用，前端基于Vue.js、Cesium.js 等框架库开发。</p>
+            >项目说明：{{works.desc}}</p>
+            <p class="slide-text">使用技术：{{works.text}}</p>
           </div>
-          <div class="slide-wrapper">
-            <div class="slide-flex">
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/H0d9405ae821e422598ce90a0416cf224W.jpg"
-                alt="富照护运营平台"
-              />
-            </div>
-            <h3 class="slide-title">富照护运营平台</h3>
-            <p
-              class="slide-text"
-            >项目说明：富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，该平台在富照护系统中主要用于运营管理人员和设备等，以及数据报警、统计等功能，人员分为多种角色以及人员和人员组；设备管理主要分为健康设备和安全设备，对设备进行增删改和人员和设备关系绑定等操作；数据统计主要用于统计异常事件、量测测试等，配合地图显示设备位置和热力图分布和查看设备信息。</p>
-            <p class="slide-text">使用技术：项目使用前后端分离开发，单页面应用，前端基于Vue.js 等框架库开发。</p>
-          </div>
-          <div class="slide-wrapper">
-            <div class="slide-flex">
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/H0ff6dbe275a34367a0be8da675720f0c0.jpg"
-                alt="富照护慢病管理系统"
-              />
-            </div>
-            <h3 class="slide-title">富照护慢病管理系统</h3>
-            <p class="slide-text">项目说明：富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，该平台在富照护系统中主要用于医生端，医生可添加关注的人员，观察关注人员的健康信息和可视化数据。</p>
-            <p class="slide-text">使用技术：项目使用前后端分离开发，单页面应用，前端基于Vue.js、Cesium.js 等框架库开发。</p>
-          </div>
-          <div class="slide-wrapper">
-            <div class="slide-flex">
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/Hdda4e40e357643ae800f3fcafcdea539h.jpg"
-                alt="FiiHealthcare"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/Hbab7c4f1fee44123a8bf0e5250d4de23j.jpg"
-                alt="FiiHealthcare"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/He8e0f25a84004b19b1ecae8db09698ecL.jpg"
-                alt="FiiHealthcare"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/He82e14e582264a7abc1e723840eafa31T.jpg"
-                alt="FiiHealthcare"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/H976f30ee1a394851ac2413fac2b95f428.jpg"
-                alt="FiiHealthcare"
-              />
-              <img
-                class="img-item box-shadow"
-                src="https://ae01.alicdn.com/kf/H3dd88f5c570d4439a13c32027245190cS.jpg"
-                alt="FiiHealthcare"
-              />
-            </div>
-            <h3 class="slide-title">FiiHealthcare 小程序</h3>
-            <p class="slide-text">项目说明：富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，这个是客户端小程序，用户录入完个人信息和人脸之后，可通过人脸识别或小程序开始测量，可查看历史测量数据和可视化图表，添加关注等功能，根据不同的角色有不同的操作权限，管理员或志愿者可添加人员。</p>
-            <p class="slide-text">使用技术：项目使用微信小程序原生框架开发，引入qrcode.js,echarts.js等工具库。</p>
-          </div>
-
         </div>
 
         <div class="home-slide slide-5">
@@ -249,19 +181,96 @@
         </div>
       </div>
     </div>
+    
+    <!-- 放大图片 -->
+    <big-img v-if="showImg" @clickit="viewImg" :imgSrc="imgSrc"></big-img>
   </section>
 </template>
 <script >
 import { setMainHeight } from "./utils/utils";
 import NavbarLayout from "@theme/layouts/Layout.vue";
+import BigImg from './layout/bigImg.vue';
 
 export default {
   name: "fristLayout",
   data() {
-    return {};
+    return {
+      showImg: false,
+      imgSrc: '',
+      worksList: [
+        {
+          images: [
+            {
+              src: 'https://ae01.alicdn.com/kf/Hd347065ad4a2401ebab0e14a2962659dE.jpg',
+              alt: '消防巡检1'
+            },{
+              src: 'https://ae01.alicdn.com/kf/H2a0345cfa303429fac83eb76cbe403ab8.jpg',
+              alt: '消防巡检2'
+            },{
+              src: 'https://ae01.alicdn.com/kf/Ha406f731286e44cb8e7186d01ce2d6b8w.jpg',
+              alt: '消防巡检3'
+            },
+          ],
+          header: '消防巡检平台',
+          desc: '该平台主要分为首页、资产、维护、事件管理等模块。首页为数据可视化大屏引入了三维模型、三维地图，反应真实的应用场景，结合了人脸识别、实时视频流、智慧传感设备，可实时推送信息，做到远程检测和控制；发生严重异常时，比如烟雾、火灾报警会实时发出警报，可视化大屏上模型会显示声光特效，实体设备做应急反应。资产主要为设备管理，支持数据的增删改查，导入导出等功能，维护主要包括巡检设备的维修、维护等管理，事件管理是对报警、推送、处理、反馈流程的管理操作。',
+          text: '项目使用前后端分离开发，单页面应用，前端采用Vue框架、Element-ui框架；以及Vue Route、Vuex、Axios等工具插件。三维地图基于Cesium.js 库开发, 结合 MapBox 实现自定义底图。'
+        },{
+          images: [
+            {
+              src: 'https://ae01.alicdn.com/kf/H0d9405ae821e422598ce90a0416cf224W.jpg',
+              alt: '富照护运营平台'
+            }
+          ],
+          header: '富照护运营平台',
+          desc: '富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，该平台在富照护系统中主要用于运营管理人员和设备等，以及数据报警、统计等功能，人员分为多种角色以及人员和人员组；设备管理主要分为健康设备和安全设备，对设备进行增删改和人员和设备关系绑定等操作；数据统计主要用于统计异常事件、量测测试等，配合地图显示设备位置和热力图分布和查看设备信息。',
+          text: '项目使用前后端分离开发，单页面应用，采用Vue框架、Element-ui框架；以及Vue Route、Vuex、Axios等工具插件。'
+        },{
+          images: [
+            {
+              src: 'https://ae01.alicdn.com/kf/H0ff6dbe275a34367a0be8da675720f0c0.jpg',
+              alt: '富照护慢病管理系统'
+            }
+          ],
+          header: '富照护慢病管理系统',
+          desc: '富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，该平台在富照护系统中主要用于医生端，医生可添加关注的人员，观察关注人员的健康信息和可视化数据。',
+          text: '项目使用前后端分离开发，单页面应用，前端基于Vue.js、Cesium.js 等框架库开发。'
+        },{
+          images: [
+            {
+              src: 'https://ae01.alicdn.com/kf/Hdda4e40e357643ae800f3fcafcdea539h.jpg',
+              alt: 'FiiHealthcare'
+            },{
+              src: 'https://ae01.alicdn.com/kf/Hbab7c4f1fee44123a8bf0e5250d4de23j.jpg',
+              alt: 'FiiHealthcare'
+            },{
+              src: 'https://ae01.alicdn.com/kf/He8e0f25a84004b19b1ecae8db09698ecL.jpg',
+              alt: 'FiiHealthcare'
+            },{
+              src: 'https://ae01.alicdn.com/kf/He82e14e582264a7abc1e723840eafa31T.jpg',
+              alt: 'FiiHealthcare'
+            },{
+              src: 'https://ae01.alicdn.com/kf/H976f30ee1a394851ac2413fac2b95f428.jpg',
+              alt: 'FiiHealthcare'
+            },{
+              src: 'https://ae01.alicdn.com/kf/H3dd88f5c570d4439a13c32027245190cS.jpg',
+              alt: 'FiiHealthcare'
+            },
+          ],
+          header: 'FiiHealthcare 小程序',
+          desc: '富照护系统是一款社区服务的产品，对需要照看护理的老人，配合物联网智能设备进行健康、环境的管理，对患有慢性疾病人群的健康信息检测管理，这个是客户端小程序，用户录入完个人信息和人脸之后，可通过人脸识别或小程序开始测量，可查看历史测量数据和可视化图表，添加关注等功能，根据不同的角色有不同的操作权限，管理员或志愿者可添加人员。',
+          text: '项目使用微信小程序原生框架开发，引入qrcode.js,echarts.js等工具库。'
+        },{
+          images: [],
+          header: '华振融小程序、H5',
+          desc: '华振融是一款金融融资、贷款的产品。',
+          text: '小程序端使用微信小程序原生框架开发，HTML5页面使用Vue框架，UI使用Vant框架。'
+        }
+      ]
+    };
   },
   components: {
-    NavbarLayout
+    NavbarLayout,
+    BigImg
   },
   mounted() {
     setMainHeight(".slide-1");
@@ -270,6 +279,16 @@ export default {
       // 绑定到窗口的这个事件中
       let mainHeight = setMainHeight(".slide-1");
     };
+  },
+  methods: {
+    toggleView(e) {
+      this.showImg = true
+      // 获取当前图片地址
+      this.imgSrc = e.currentTarget.src
+    },
+    viewImg() {
+      this.showImg = false
+    }
   }
 };
 </script>
@@ -293,7 +312,20 @@ export default {
   }
 
   .slide-title {
-    margin: 0.625rem auto;
+    margin: .625rem auto;
+    &::before {
+      content: '\25B2';
+      display: inline-block;
+      margin-right: .625rem;
+      color: #8492a6;
+      transform: scale(.8);
+      // border: 8px solid #8492a6;
+      // border-top-color: transparent;
+      // border-left-color: transparent;
+      // border-right-color: transparent;
+      // width: 0;
+      // height: 0;
+    }
   }
 
   .slide-text {
@@ -310,7 +342,7 @@ export default {
   .slide-flex {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 2.5rem 0 1.25rem;
     .img-item {
       margin: 0.96vw 0.96vw 0.96vw 0;
       max-width: 90vw;
@@ -318,13 +350,43 @@ export default {
     }
 
     .img-fixed {
+      position: relative;
       margin: 0.96vw;
       width: 12vw;
       height: 12vw;
       overflow: hidden;
+      box-sizing: border-box;
+      z-index: 1;
+      cursor: pointer;
+      &:hover {
+        .blog-item {
+          opacity: 0;
+        }
+        .blog-item-content {
+          opacity: 1;
+          transform: scale(1,1);
+        }
+      }
 
       img {
+        padding-top: 50%;
         width: 100%;
+      }
+
+      .blog-item-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: #dadada;
+        transform: scale(1,0);
+        transition: opacity .35s,transform .35s;
+        opacity: 0;
+        p {
+          margin: .625rem;
+        }
       }
     }
   }

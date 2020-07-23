@@ -73,3 +73,24 @@ body::-webkit-scrollbar-track,
 .border-radius13 {
   border-radius: .75rem;
 }
+
+.blog-flex {
+  display: flex;
+}
+
+.blog-flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.blog-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

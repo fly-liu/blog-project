@@ -7,9 +7,9 @@ tag: # 页面的标签
 # 一些 meta 标签, 可以用于被搜索引擎爬取
 meta:
   - name: description
-    content: 刘哈哈 个人博客 笔记 基础 Linux 常用命令 快捷键 VIM编辑器
+    content: Linux 常用命令 VIM编辑器 快捷键 笔记 基础  
   - name: keywords # keywords 标签, 在页内搜索时会被查询
-    content: 笔记 基础 Linux 常用命令 快捷键 VIM编辑器
+    content: Linux 常用命令 VIM编辑器 快捷键 笔记 基础
 prev: ./VIM编辑器配置(四)
 next: ./ssh和root账户配置(二)
 ---
@@ -77,6 +77,18 @@ gi 快速跳转到最后一次编辑的地方并进入插入模式
 
 
 ## 命令模式操作
+
+### 退出
+按ESC键 跳到命令模式，然后输入：
+
+`:w        `- 保存文件，不退出 vim
+`:w file`   - 将修改另外保存到 file 中，不退出 vim
+`:w! `      - 强制保存，不退出 vim
+`:wq       `- 保存文件，退出 vim
+`:wq!`      - 强制保存文件，退出 vim
+`:q        `- 不保存文件，退出 vim
+`:q!`       - 不保存文件，强制退出 vim
+`:e!`       - 放弃所有修改，从上次保存文件开始再编辑
 
 ### 进入插入模式
 ``` 
