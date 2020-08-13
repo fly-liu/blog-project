@@ -187,7 +187,6 @@
   </section>
 </template>
 <script >
-import { setMainHeight } from "./utils/utils";
 import NavbarLayout from "@theme/layouts/Layout.vue";
 import BigImg from './layout/bigImg.vue';
 
@@ -273,12 +272,9 @@ export default {
     BigImg
   },
   mounted() {
-    setMainHeight(".slide-1");
+    this.setMainHeight(".slide-1");
 
-    window.onresize = () => {
-      // 绑定到窗口的这个事件中
-      let mainHeight = setMainHeight(".slide-1");
-    };
+    window.addEventListener('resize', this.setMainHeight,false);
   },
   methods: {
     toggleView(e) {
@@ -288,7 +284,20 @@ export default {
     },
     viewImg() {
       this.showImg = false
+    },
+    setMainHeight() {
+      let wH = window.innerHeight; // 当前窗口的高度
+      let mainHeight = wH - document.querySelector('.navbar').offsetHeight;
+      
+      if(document.querySelector(".slide-1")) {
+        document.querySelector(".slide-1").style.height = mainHeight + "px";
+      }
+      
+      return mainHeight;
     }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize',this.setMainHeight,false)
   }
 };
 </script>

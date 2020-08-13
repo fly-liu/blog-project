@@ -25,9 +25,3 @@ export function getCount(arr) {
   return arr1;
 }
 
-export function setMainHeight(element) {
-  let wH = window.innerHeight; // 当前窗口的高度
-  let mainHeight = wH - document.querySelector('.navbar').offsetHeight;
-  document.querySelector(element).style.height = mainHeight + "px";
-  return mainHeight;
-}

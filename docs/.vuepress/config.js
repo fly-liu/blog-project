@@ -51,7 +51,7 @@ module.exports = {
             },
             { text: '后端', link: '/serve/' }, // 指定它为标签目录
             { text: 'Linux', link: '/linux/linux/'},
-            { text: 'Android', link: '/android/android/' },
+            // { text: 'Android', link: '/android/android/' },
             { text: 'TAGS', link: '/tags/' }, // 指定它为标签目录
             { text: '关于我', link: '/about/' }
         ],
@@ -80,6 +80,14 @@ module.exports = {
                 children: [
                     'vueLog', 
                     'vueLog2', 
+                ]
+            }],
+            '/home/cesium/': [{
+                title: 'Cesium',
+                collapsable: true, // 设置为永远都是展开状态
+                sidebarDepth: 2, // 默认显示的侧边栏深度,最大的深度为 2，它将同时提取 h2 和 h3 标题
+                children: [
+                    'cesium讲解', 
                 ]
             }]
         },
