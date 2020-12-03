@@ -1,3 +1,3 @@
 ---
-layout: VueList
+layout: vueList
 ---

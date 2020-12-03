@@ -7,5 +7,5 @@ meta:
     content: 刘哈哈的个人博客 笔记 vuepress node 
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: vuepress node
-layout: TagsLayout
+layout: tagsLayout
 ---

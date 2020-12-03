@@ -32,7 +32,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: "https://github.com/fly-liu/fly-liu.github.io/", // github链接
+        repo: "https://github.com/fly-liu/blog-project", // github链接
         logo: 'https://ae01.alicdn.com/kf/Hf2c1a9a9686148debc15f0b0ac1fea85a.jpg', // 博客的 logo
         accentColor: '#ac3e40', // 定制文章标题颜色
         per_page: 5, // 每页显示的文章数量

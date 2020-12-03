@@ -7,5 +7,5 @@ meta:
     content: 刘哈哈 个人博客 笔记  about
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: vuepress about
-layout: AboutLayout
+layout: aboutLayout
 ---

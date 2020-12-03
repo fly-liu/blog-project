@@ -12,5 +12,5 @@
 #   details: 学习从兴趣开始，兴趣就是对真理的一点点好奇。
 # - title: 好奇
 #   details: 好奇的很。
-layout: FristLayout
+layout: fristLayout
 ---

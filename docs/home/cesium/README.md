@@ -1,3 +1,3 @@
 ---
-layout: CesiumList
+layout: cesiumList
 ---
