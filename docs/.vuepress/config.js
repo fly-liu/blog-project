@@ -42,7 +42,7 @@ module.exports = {
             {
                 text: "前端",
                 items: [
-                    { text: 'HTML CSS JS', link: '/home/BasicsList/' },
+                    { text: 'HTML CSS JS', link: '/home/basicsList/' },
                     { text: 'Vue', link: '/home/vue/' },
                     { text: 'React', link: '/home/react/' },
                     { text: 'Cesium', link: '/home/cesium/' },
