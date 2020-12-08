@@ -51,9 +51,9 @@
           </p>
           <div class="slide-flex">
             <div class="blog-flex-centered img-fixed box-shadow border-radius13">
-              <h3 class="blog-item">勤奋</h3>
+              <h3 class="blog-item">热爱</h3>
               <div class="blog-item-content">
-                <p>勤奋</p>
+                <p>热爱</p>
               </div>
             </div>
             <div class="blog-flex-centered img-fixed box-shadow border-radius13">
@@ -353,14 +353,14 @@ export default {
     flex-wrap: wrap;
     margin: 2.5rem 0 1.25rem;
     .img-item {
-      margin: 0.96vw 0.96vw 0.96vw 0;
+      margin: .96vw .96vw .96vw 0;
       max-width: 90vw;
       max-height: 160px;
     }
 
     .img-fixed {
       position: relative;
-      margin: 0.96vw;
+      margin: .9vw;
       width: 12vw;
       height: 12vw;
       overflow: hidden;
@@ -436,14 +436,15 @@ export default {
       display: flex;
       img,
       button {
-        margin: 0 0.625rem;
+        margin: 0 .625rem;
+        border-radius: .625rem /* 10/16 */;
         width: 3.875rem;
         height: 3.875rem;
       }
 
       button {
         border: 4px solid $theme-font-color;
-        font-size: 0.875rem;
+        font-size: .875rem;
         font-weight: 600;
         background: #fff;
         &:hover {

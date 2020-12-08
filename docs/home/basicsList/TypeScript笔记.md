@@ -12,7 +12,7 @@ meta:
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: Typescript Javascript 基础笔记
 prev: ./WechatMinProgram
-# next: ./vuePress
+next: ./cookieTest
 ---
 
 # TypeScript 笔记

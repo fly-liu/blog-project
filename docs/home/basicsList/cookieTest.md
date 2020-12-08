@@ -10,8 +10,8 @@ meta:
     content: 使用Cookie，和封装 Javascript Cookie 同一浏览器内多标签之间通信
   - name: keywords # keywords 标签, 在页内搜索时会被查询
     content: 使用Cookie，和封装 同一浏览器内多标签之间通信
-prev: ./Javascript基础笔记
-# next: 
+prev: ./TypeScript笔记
+next: ./知识点笔记
 ---
 [参考](https://blog.csdn.net/liwenfei123/article/details/80027155)
 [参考](https://blog.csdn.net/zhangquan_zone/article/details/77627899)
